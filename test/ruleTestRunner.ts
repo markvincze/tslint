@@ -23,6 +23,7 @@ import { consoleTestResultHandler, runTest } from "../src/test";
 process.stdout.write(chalk.underline("\nTesting Lint Rules:\n"));
 
 const testDirectories = glob.sync("test/rules/**/tslint.json").map(path.dirname);
+// const testDirectories = glob.sync("test/rules/no-empty/allow-empty-functions/tslint.json").map(path.dirname);
 
 for (const testDirectory of testDirectories) {
     const results = runTest(testDirectory);
